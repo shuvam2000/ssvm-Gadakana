@@ -1,0 +1,104 @@
+/* Custom CSS for School Website */
+
+/* Navbar logo */
+.logo img {
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Dropdown item hover color */
+.dropdown-item:hover {
+    color: yellow;
+}
+
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Social icon styles */
+.social-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #000;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+/* School logo hover */
+.school-logo:hover {
+    cursor: pointer;
+}
+
+/* Basic styling for the banner and form */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Scrolling text animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Scrolling text container */
+.scroll-text-container {
+    overflow: hidden; /* Hide scrollbar */
+    width: 100%;
+    max-width: 100%; /* Set maximum width */
+    height: 48px; /* Fixed height */
+    border: 2px solid #ccc; /* Border color */
+    background-color: #f0f0f0; /* Background color */
+}
+
+/* Scrolling text style */
+.scroll-text {
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: scroll 20s linear infinite; /* Animation properties */
+    padding: 0 50px; /* Padding on the sides */
+    height: 100%;
+    display: inline-block; /* Ensure inline display */
+    border: 2px solid #333; /* Border color */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Style for the scrolling text */
+.scroll-text span {
+    font-size: 24px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+}
+
+/* Additional space between sentences */
+.extra-space {
+    padding-right: 20px; /* Adjust as needed */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .logo img {
+        height: 60px;
+        width: 60px;
+    }
+    
+    .scroll-text {
+        padding: 0 20px; /* Adjust padding for smaller screens */
+    }
+    
+    .scroll-text span {
+        font-size: 18px; /* Decrease font size for smaller screens */
+    }
+}
