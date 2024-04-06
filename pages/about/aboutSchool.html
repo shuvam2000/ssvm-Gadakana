@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About our school</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header"></div> <!-- This is where the header will be injected -->
+    <div class="content">
+        <h1>Welcome to Stewart School, Cuttack</h1>
+        <p>Stewart School, Cuttack has its tell-tale glorious past, soaked in legend. Stewart School, Cuttack was
+            founded in 1882 by the enterprise and generosity of Dr. William Day Stewart, a Civil Surgeon based at
+            Cuttack.</p>
+        <p>In 1910, the school was recognized as a Higher Elementary School by the Inspector of European Schools, Bihar
+            and Odisha. The name of the school was altered to Stewart School, Cuttack, to perpetuate the name of its
+            Founder, Dr. Stewart.</p>
+        <p>In the year 1924 the school was confirmed in the status of Junior Secondary School and the Cambridge
+            Syndicate sanctioned the opening of a centre for Cambridge Examinations in the school.</p>
+        <p>In the year 1974, the school was affiliated to CISCE, New Delhi.</p>
+
+        <h2>Key Dates:</h2>
+        <ul>
+            <li>Founded in 1882</li>
+            <li>Named "Stewart School, Cuttack" in 1924</li>
+            <li>Affiliated to CISCE in 1974</li>
+        </ul>
+    </div>
+
+    <!-- Include the script to load header -->
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const header = document.getElementById('header');
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'header.html', true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        header.innerHTML = xhr.responseText;
+      }
+    };
+    xhr.send();
+  });
+    </script>
+</body>
+
+</html>
